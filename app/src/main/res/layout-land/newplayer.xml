@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Campo Name -->
+        <ImageView
+            android:id="@+id/imageName"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="#808080"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@id/imageName"
+            app:layout_constraintTop_toTopOf="@id/imageName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo Phonetic Name -->
+        <EditText
+            android:id="@+id/editPhoneticName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Phonetic name"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/editName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo Nickname -->
+        <EditText
+            android:id="@+id/editNickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nickname"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/editPhoneticName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Imagen Android con botón CHANGE -->
+        <ImageView
+            android:id="@+id/imageCamera"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:tint="#808080"
+            app:layout_constraintTop_toBottomOf="@id/editNickname"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/imageAndroid"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:background="#D3D3D3"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="@id/imageCamera"
+            app:layout_constraintStart_toEndOf="@id/imageCamera"/>
+
+        <Button
+            android:id="@+id/buttonChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHANGE"
+            app:layout_constraintTop_toTopOf="@id/imageCamera"
+            app:layout_constraintStart_toEndOf="@id/imageAndroid"
+            android:layout_marginStart="10dp"/>
+
+        <!-- Campo Phone con Spinner -->
+        <ImageView
+            android:id="@+id/imagePhone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_call"
+            app:tint="#808080"
+            app:layout_constraintTop_toBottomOf="@id/imageAndroid"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toTopOf="@id/imagePhone"
+            app:layout_constraintStart_toEndOf="@id/imagePhone"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo E-mail -->
+        <ImageView
+            android:id="@+id/imageEmail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_email"
+            app:tint="#808080"
+            app:layout_constraintTop_toBottomOf="@id/spinnerPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toTopOf="@id/imageEmail"
+            app:layout_constraintStart_toEndOf="@id/imageEmail"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
